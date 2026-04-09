@@ -54,3 +54,10 @@ Cat
 ```csharp
 public Example(int num = -1, string word = "unknown", int rd = 3)
 ```
+Тогда для каждого конструктора будет задано определенное значение на неуказанных элементах
+```csharp
+Example ex = new Example(2);                   // 2, "unknow", 3
+Example ex2 = new Example(1, "new");           // 1, "new", 3
+Example ex3 = new Example(2, "abs new", 1);    // 2, "abs new", 1
+Example ex4 = new Example();                   // -1, "unknow", 3
+```
